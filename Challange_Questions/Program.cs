@@ -61,8 +61,8 @@ namespace ChallangeQuestion
             string numA = a.ToString();
             string numB = b.ToString();
 
-            numA.ToArray();
-            numB.ToArray();
+            //numA.ToArray();
+            //numB.ToArray();
 
             int capture = 0;
             int capture2 = 0;
@@ -74,7 +74,19 @@ namespace ChallangeQuestion
                 capture2++;
 
             if (capture == c && capture2 == c)
-                return true;
+            {
+                int hasSame = 0;
+                for (int i = 0;i<numB.Length;i++)
+                {
+                    if (numB[i] == numA[i])
+                        hasSame++;
+                    else
+                        break;
+                }
+                if (hasSame != 0)
+                    return true;
+                else return false;
+            }
 
             else
                 return false;
@@ -82,10 +94,15 @@ namespace ChallangeQuestion
 
         public static void Main(string[] args)
         {
-            for (int i = 0; i < 5; i++)
-            {
-                NoBlankDigits();
-            }
+            //for (int i = 0; i < 5; i++)
+            //{
+            //    NoBlankDigits();
+            //}
+            Console.WriteLine(SharesDigit(456, 123, 3));     // should return false, because no two numbers are the same in both ints.
+            Console.WriteLine(SharesDigit(456, 400, 3));     // should return true, because there is a 4 in both numbers.
+            Console.WriteLine(SharesDigit(12345, 67890, 5)); // should return false because no two numbers are the same in both ints.
+            Console.WriteLine(SharesDigit(12345, 12345, 5)); // should return true because the two ints share multiple digits.
+            Console.WriteLine(SharesDigit(123, 423, 1));     //should return false, because the last argument should be how many digits to check.
             //Console.WriteLine(SharesDigit(1, 2, 1)); 
             //Console.WriteLine(SharesDigit(2, 1, 2));
             //Console.WriteLine(SharesDigit(22, 12, 2));
