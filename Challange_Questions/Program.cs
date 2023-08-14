@@ -103,9 +103,9 @@ namespace ChallangeQuestion
             Console.WriteLine(SharesDigit(12345, 67890, 5)); // should return false because no two numbers are the same in both ints.
             Console.WriteLine(SharesDigit(12345, 12345, 5)); // should return true because the two ints share multiple digits.
             Console.WriteLine(SharesDigit(123, 423, 1));     //should return false, because the last argument should be how many digits to check.
-            //Console.WriteLine(SharesDigit(1, 2, 1)); 
-            //Console.WriteLine(SharesDigit(2, 1, 2));
-            //Console.WriteLine(SharesDigit(22, 12, 2));
+            Console.WriteLine(SharesDigit(1, 2, 1));         //
+            Console.WriteLine(SharesDigit(2, 1, 2));         //
+            Console.WriteLine(SharesDigit(22, 12, 2));       //
         }
     }
 }
