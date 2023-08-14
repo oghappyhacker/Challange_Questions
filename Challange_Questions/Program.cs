@@ -102,7 +102,7 @@ namespace ChallangeQuestion
             Console.WriteLine(SharesDigit(456, 400, 3));     // should return true, because there is a 4 in both numbers.
             Console.WriteLine(SharesDigit(12345, 67890, 5)); // should return false because no two numbers are the same in both ints.
             Console.WriteLine(SharesDigit(12345, 12345, 5)); // should return true because the two ints share multiple digits.
-            Console.WriteLine(SharesDigit(123, 423, 1));     //should return false, because the last argument should be how many digits to check.
+            Console.WriteLine(SharesDigit(123, 423, 1));     // should return false, because the last argument should be how many digits to check. If your function uses the last argument correctly, it will only check as many digits of the number of the last argument starting from the leftmost digit. Therefore, this function call should only compare "1" and "4".
             Console.WriteLine(SharesDigit(1, 2, 1));         //
             Console.WriteLine(SharesDigit(2, 1, 2));         //
             Console.WriteLine(SharesDigit(22, 12, 2));       //
